@@ -1,19 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/globalStyles.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>TechPosters - Home</title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-  </body>
-  <script src="/script/database/users.js"></script>
-  <script src="/script/database/posts.js"></script>
-  <script src="/script/database/sugestUsers.js"></script>
-  <script src="index.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/globalStyles.css" />
+  <link rel="stylesheet" href="../../styles/buttons.css">
+  <link rel="stylesheet" href="../../styles/display.css">
+  <link rel="stylesheet" href="../../styles/modal.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../styles/profile.css">
+  <link rel="stylesheet" href="../../styles/inputs.css">
+  <link rel="stylesheet" href="../../styles/posts.css">
+  <title>TechPosters - Home</title>
+</head>
+
+<body>
+
+  <!--Cabeçalho-->
+  <header>
+    <div class="container display-flex display-flex-row display-flex-justify">
+      <img src="../../assets/img/logo.svg" alt="logo-site">
+      <button class="button-logout">Sair</button>
+    </div>
+  </header>
+
+  <!--Conteúdo principal-->
+  <main class="main-desktop">
+
+    <!--Seção para adcionar novos posts-->
+    <div class="display-desktop">
+
+      <div class="container-desktop">
+
+        <section class="post-creator container container-desktop">
+
+          <div class="display-flex display-flex-row">
+            <img class="img-profile" src="../../assets/img/user1.svg" alt="user1">
+            <span class="profile info">
+              <h3 class="profile-name">Samuel Leão</h3>
+              <p class="profile-desc">Front end Engineer</p>
+            </span>
+          </div>
+
+          <input class="input-post input-title-post" type="text" placeholder="Digitar título do post">
+          <input class="input-post input-desc-post" type="text" placeholder="Digitar descrição do post">
+
+          <div class="button-post-box">
+            <button class="button-post">Postar</button>
+          </div>
+        </section>
+
+      </div>
+
+      <!--Aside com sugestões de perfis para serem seguidos-->
+      <aside class="container profile-suggests-fixed">
+
+        <h2 class="profile-suggests-title profile-suggests-box">Sugestões para você seguir</h2>
+
+        <div class="display-flex display-flex-row profile-suggests profile-suggests-desktop">
+
+
+          <!-- Perfil sugerido -->
+          <div class="display-flex display-flex-column profile-suggests-item-desktop">
+
+            <span class="display-flex display-flex-row profile-suggests-item">
+              <img class="img-profile" src="../../assets/img/user3.svg" alt="user3">
+
+              <span>
+                <h3 class="profile-name">Carlos Lima</h3>
+                <p class="profile-desc">UX e UI Desginer</p>
+              </span>
+
+            </span>
+            <button class="button-follow">Seguir</button>
+          </div>
+
+
+          <!-- Perfil sugerido -->
+          <div class="display-flex display-flex-column profile-suggests-item-desktop">
+
+            <span class="display-flex display-flex-row profile-suggests-item">
+              <img class="img-profile" src="../../assets/img/user6.svg" alt="user6">
+
+              <span>
+                <h3 class="profile-name">Larissa Camargo</h3>
+                <p class="profile-desc">UI Developer</p>
+              </span>
+
+            </span>
+
+            <button class="button-follow">Seguir</button>
+          </div>
+
+
+          <!-- Perfil sugerido -->
+          <div class="display-flex display-flex-column profile-suggests-item-desktop">
+
+            <span class="display-flex display-flex-row profile-suggests-item">
+              <img class="img-profile" src="../../assets/img/user7.svg" alt="user7">
+
+              <span>
+                <h3 class="profile-name">Filipe Gutierry</h3>
+                <p class="profile-desc">Full Stack Developer</p>
+              </span>
+
+            </span>
+
+            <button class="button-follow">Seguir</button>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+    <!-- Posts  -->
+    <div class="container-desktop">
+
+      <section class="container">
+
+        <h2 class="title-posts title-section-posts">Posts</h2>
+
+        <div class="add-posts">
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../../script/database.js"></script>
+  <script src="../../script/script.js"></script>
+</body>
+
 </html>

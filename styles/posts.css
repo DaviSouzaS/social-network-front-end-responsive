@@ -1,0 +1,31 @@
+.post-creator {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+.posts-infos {
+    margin-top: 32px;
+    margin-bottom: 50px;
+}
+
+.title-posts {
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-size-1);
+    color: var(--grey1);
+    line-height: var( --line-height-1);
+}
+
+.desc-posts {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-3);
+    color: var(--grey2);
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+.title-section-posts {
+    margin-bottom: 50px;
+}
+
+

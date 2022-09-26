@@ -1,0 +1,151 @@
+.button-logout {
+    border: 0;
+    background-color: transparent;
+    font-family: var(--principal-font);
+    color: var(--white);
+    font-weight: 400;
+    font-size: var(--font-size-4); 
+    cursor: pointer;  
+}
+
+.button-post {
+    border: 0;
+    background-color: var(--brand-1);
+    color: var(--white);
+    border-radius: var(--border-radius-1);
+    font-family: var(--principal-font);
+    width: 69px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.button-post:hover {
+    transition-duration: 0.2s;
+    background-color: var(--brand-2);
+}
+
+.button-post:focus {
+    transition-duration: 0.2s;
+    background-color: var(--grey4);
+    color: var(--grey3);
+    border-radius: var
+}
+
+.button-post-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-follow {
+    width: 60px;
+    height: 28px;
+    margin-top: 14px;
+    background-color: var(--white);
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-600);
+    padding: 7px;
+    color: var(--grey1);
+    border: 1px solid var(--grey0);
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+
+}
+
+.button-follow:hover {
+    transition-duration: 0.2s;
+    background-color: var(--grey5);
+    border: 1px solid var(--brand-1);
+    color: var(--brand-1);
+}
+
+.button-follow:focus {
+    transition-duration: 0.2s;
+    background-color: var(--brand-1);
+    color: var(--white);
+}
+
+.button-open-posts {
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-4);
+    border: 0;
+    background-color: var(--grey1);
+    color: var(--white);
+    border-radius: var(--border-radius-1);
+    padding: 10px;
+    height: 38px;
+    margin-right: 32px;
+    cursor: pointer;
+
+}
+
+.button-open-posts:hover {
+    transition-duration: 0.2s;
+    background-color: var(--grey0);
+}
+
+.button-like {
+    margin-top: 5px;
+    width: 23px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    transform: rotate(-135deg);
+}
+
+.square {
+    width: 14px;
+    height: 13px;
+    background-color: var(--grey3);
+    position: absolute;
+}
+
+.circle {
+    width: 14px;
+    height: 13px;
+    border-radius: 100%;
+    background-color: var(--grey3);
+    position: absolute;
+}
+
+.top {
+    top: 35%;
+}
+
+.left {
+    left: 35%;
+}
+
+.likes {
+    margin-top: 8px;
+    margin-left: 7px;
+}
+
+.button-close-modal {
+    font-family: var(--button-close-font);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-400);
+    color: var(--grey3);
+    background-color: var(--grey5);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 85%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

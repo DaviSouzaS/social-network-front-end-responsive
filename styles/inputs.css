@@ -1,0 +1,26 @@
+.input-post {
+    width: 100%; 
+    border-radius: var(--border-radius-1);
+    border: 2px solid var(--grey4);
+}
+
+.input-post:focus {
+    outline-color: var(--brand-1);
+}
+
+.input-title-post {
+    height: 52px;
+    margin-top: 42px;
+}
+
+.input-desc-post {
+    height: 130px;
+    margin: 22px 0 22px 0;
+}
+
+.input-post::placeholder {
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-3);
+    padding: 10px;
+}

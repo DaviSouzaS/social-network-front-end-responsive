@@ -1,0 +1,25 @@
+.modal-post {
+    width: 80%;
+    background-color: var(--white);
+    border-radius: var(--border-radius-3);
+    padding: 24px;
+    position: relative;
+}
+
+.modal-post-title {
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+.modal-post-paragraph {
+    margin-bottom: 45px;
+}
+
+.modal__bg {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
