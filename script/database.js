@@ -1,7 +1,7 @@
 const posts = [ 
     {
         id: "1",
-        img: "../../assets/img/user2.svg",
+        img: "assets/img/user2.svg",
         name: "Samuel Persuhn",
         role: "Front end Engineer",
         title: "Empresa de Tecnologia da Informação abre vagas para programa de estágio",
@@ -10,7 +10,7 @@ const posts = [
 
     {
         id: "2",
-        img: "../../assets/img/user4.svg",
+        img: "assets/img/user4.svg",
         name: "Carla Maria",
         role: "Back end Engineer",
         title: "Como melhorar sua lógica de programação? Desenvolvemos 5 passos para te ajudar",
@@ -19,7 +19,7 @@ const posts = [
 
     {
         id: "3",
-        img: "../../assets/img/user5.svg",
+        img: "assets/img/user5.svg",
         name: "Júlia Martins",
         role: "Devop's",
         title: "NextJS como essa ferramenta revolucionou a maneira de desenvolver sites",
