@@ -20,7 +20,7 @@ function createPosts (postItem) {
     imgProfile.alt = `user` + postItem.id
     imgProfile.classList.add('img-profile')
 
-    let span = document.createElement('span')
+    let spanNormal = document.createElement('span')
 
     let h3Name = document.createElement('h3')
     h3Name.classList.add('profile-name')
@@ -65,8 +65,8 @@ function createPosts (postItem) {
 
     spanContainer.append(button, divButtonLike, pLike)
     divPostsInfo.append(h3Title, pDesc, spanContainer)
-    span.append(h3Name, pRole)
-    divContainer.append(imgProfile, span)
+    spanNormal.append(h3Name, pRole)
+    divContainer.append(imgProfile, spanNormal)
     divBox.append(divContainer, divPostsInfo)
 
     divPosts.append(divBox)
@@ -91,11 +91,11 @@ function createPosts (postItem) {
     let spanModal = document.createElement('span')
 
     let h3NameModal = document.createElement('h3')
-    h3Name.classList.add('profile-name')
-    h3Name.innerHTML = postItem.name
+    h3NameModal.classList.add('profile-name')
+    h3NameModal.innerHTML = postItem.name
 
     let pDescModal = document.createElement('p')
-    pDesc.innerHTML = postItem.desc
+    pDescModal.innerHTML = postItem.role
 
     let buttonClose = document.createElement('button')
     buttonClose.classList= 'button-close-modal button-close-modal-desktop'
@@ -123,7 +123,7 @@ function createPosts (postItem) {
 
     divInfo.append(h2, p, p2, p3)
     spanModal.append(h3NameModal, pDescModal)
-    divFlex.append(img, span)
+    divFlex.append(img, spanModal)
     divDisplay.append(divFlex, buttonClose)
     sectionContainer.append(divDisplay, divInfo)
     divModal.append(sectionContainer)
