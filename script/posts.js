@@ -2,14 +2,13 @@ function separatingPosts (postsList) {
 
     for (let i = 0; i < postsList.length; i++) {
         let postObj = postsList[i]
-        addPosts(postObj)
-        createModal(postObj)
+        createPosts(postObj)
     }
 }
 
 separatingPosts(posts)
 
-function addPosts (postItem) {
+function createPosts (postItem) {
 
     let divBox = document.createElement('div')
 
@@ -43,23 +42,20 @@ function addPosts (postItem) {
     pDesc.innerHTML = postItem.desc
 
     let spanContainer = document.createElement('span')
-    spanContainer.classList = 'display-flex display-flex-row'
+    spanContainer.classList = 'display-flex display-flex-row display-align-center'
 
     let button = document.createElement('button')
     button.classList.add('button-open-posts')
     button.innerText = 'Abrir Post'
 
+
     let divButtonLike = document.createElement('div')
     divButtonLike.classList.add('button-like')
 
-    let divSquare = document.createElement('div')
-    divSquare.classList.add('square')
-
-    let divCircleTop = document.createElement('div')
-    divCircleTop.classList = 'circle top'
-    
-    let divCircleLeft = document.createElement('div')
-    divCircleLeft.classList = 'circle left'
+    divButtonLike.innerHTML = `<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.7134 0C14.4034 0 12.3978 1.30143 11.3793 3.21286C10.3609 1.30143 8.35526 0 6.04526 0C2.70685 0 0 2.71857 0 6.07143C0 14.2857 11.3793 20 11.3793 20C11.3793 20 22.7586 14.2857 22.7586 6.07143C22.7586 2.71857 20.0518 0 16.7134 0Z" fill="#868E96"/>
+    </svg>
+    `
 
     let pLike = document.createElement('p')
     pLike.classList.add('likes')
@@ -67,8 +63,6 @@ function addPosts (postItem) {
 
     const divPosts = document.querySelector('.add-posts')
 
-
-    divButtonLike.append(divSquare, divCircleTop, divCircleLeft)
     spanContainer.append(button, divButtonLike, pLike)
     divPostsInfo.append(h3Title, pDesc, spanContainer)
     span.append(h3Name, pRole)
@@ -76,15 +70,12 @@ function addPosts (postItem) {
     divBox.append(divContainer, divPostsInfo)
 
     divPosts.append(divBox)
-}
-
-function createModal (list) {
 
     let divModal = document.createElement('div')
-    divModal.classList.add('modal-post-desktop')
+    divModal.classList = 'modal-post-desktop modal__bg'
 
     let sectionContainer = document.createElement('section')
-    sectionContainer.classList = 'container modal-post'
+    sectionContainer.classList = 'modal-post modal-desktop'
 
     let divDisplay = document.createElement('div')
     divDisplay.classList = 'display-flex display-flex-row display-flex-justify'
@@ -93,45 +84,68 @@ function createModal (list) {
     divFlex.classList = 'display-flex display-flex-row'
 
     let img = document.createElement('img')
-    img.src = list.img
-    img.alt = `user` + list.id
+    img.src = postItem.img
+    img.alt = `user` + postItem.id
     img.classList.add('img-profile')
 
-    let span = document.createElement('span')
+    let spanModal = document.createElement('span')
 
-    let h3Name = document.createElement('h3')
+    let h3NameModal = document.createElement('h3')
     h3Name.classList.add('profile-name')
-    h3Name.innerHTML = list.name
+    h3Name.innerHTML = postItem.name
 
-    let pDesc = document.createElement('p')
-    pDesc.innerHTML = list.desc
-
-    let spanCloseModal = document.createElement('span')
-    spanCloseModal.classList.add('close-modal-desktop')
+    let pDescModal = document.createElement('p')
+    pDesc.innerHTML = postItem.desc
 
     let buttonClose = document.createElement('button')
-    buttonClose.classList.add('button-close-modal')
+    buttonClose.classList= 'button-close-modal button-close-modal-desktop'
     buttonClose.innerText = 'X'
+
+    openModal (button, buttonClose, divModal)
 
     let divInfo = document.createElement('div')
 
     let h2 = document.createElement('h2')
     h2.classList = 'title-posts modal-post-title'
-    h2.innerHTML = list.title
+    h2.innerHTML = postItem.title
 
     let p = document.createElement('p')
     p.classList.add('modal-post-paragraph')
-    p.innerHTML = list.desc
+    p.innerHTML = postItem.desc
 
-    divInfo.append(h2, p)
-    spanCloseModal.append(buttonClose)
-    span.append(h3Name, pDesc)
+    let p2 = document.createElement('p')
+    p2.classList.add('modal-post-paragraph')
+    p2.innerHTML = postItem.desc2
+
+    let p3 = document.createElement('p')
+    p3.classList.add('modal-post-paragraph')
+    p3.innerHTML = postItem.desc3
+
+    divInfo.append(h2, p, p2, p3)
+    spanModal.append(h3NameModal, pDescModal)
     divFlex.append(img, span)
-    divDisplay.append(divFlex, spanCloseModal)
+    divDisplay.append(divFlex, buttonClose)
     sectionContainer.append(divDisplay, divInfo)
     divModal.append(sectionContainer)
 
-    return divModal
 }
 
+const body = document.querySelector('body')
+
+function openModal (btnOpen, btnClose, anexo) {
+    
+    btnOpen.addEventListener ('click', function () {
+        
+        body.appendChild(anexo)
+        closeModal(btnClose, anexo)
+    })
+    
+}
+
+function closeModal (btnClose, anexo) {
+
+    btnClose.addEventListener ('click', function () {
+        anexo.remove()
+    })
+}
 
