@@ -132,20 +132,20 @@ function createPosts (postItem) {
 
 const body = document.querySelector('body')
 
-function openModal (btnOpen, btnClose, anexo) {
+function openModal (btnOpen, btnClose, way) {
     
     btnOpen.addEventListener ('click', function () {
         
-        body.appendChild(anexo)
-        closeModal(btnClose, anexo)
+        body.appendChild(way)
+        closeModal(btnClose, way)
     })
     
 }
 
-function closeModal (btnClose, anexo) {
+function closeModal (btnClose, way) {
 
     btnClose.addEventListener ('click', function () {
-        anexo.remove()
+        way.remove()
     })
 }
 
